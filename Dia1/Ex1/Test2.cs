@@ -24,7 +24,7 @@ namespace Ex1
 			Imposto irpf = new Irpf (pj);
 		}
 
-		[Test ()]
+        [Test(), ExpectedException(typeof(ArgumentException))] // Não havia ArgumentException
 		public void TestIRPFJ1()
 		{
 			PessoaJuridica pj = CriaPessoaJuridica ();
